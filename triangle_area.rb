@@ -17,5 +17,14 @@ def ask_height
   return height
 end
 
+def calculate_area(base,height)
+  area = 0.5 * base * height
+  return area
+end
+
+
+
 triangle_base = ask_base
 triangle_height = ask_height
+triangle_area = calculate_area(triangle_base,triangle_height)
+puts "area of triangle is #{triangle_area}"
