@@ -17,11 +17,11 @@
 
 # Получаем три коэффициента от пользователя
 
-puts "input coefficient a"
+puts "input coefficient a: "
 coefficient_a = gets.to_i
-puts "input coefficient b"
+puts "input coefficient b: "
 coefficient_b = gets.to_i
-puts "input coefficient c"
+puts "input coefficient c: "
 coefficient_c = gets.to_i
 
 
