@@ -20,3 +20,18 @@ puts "input side 2: "
 side_2 = ask_side
 puts "input side 3: "
 side_3 = ask_side
+
+if (side_1  == side_2) || (side_2 == side_3) || (side_1 == side_3)
+  puts "Your triangle is isosceles"
+end
+if (side_1 == side_2) && (side_2== side_3)
+  puts "Your triangle is equilateral"
+end
+
+if (side_1 > side_2) && (side_1 > side_3) && (side_1*side_1 == side_2*side_2 + side_3*side_3)
+  puts "Your triangle is right"
+elsif (side_2 > side_1) && (side_2 > side_3) && (side_2*side_2 == side_1*side_1 + side_3*side_3)
+  puts "Your triangle is right"
+elsif (side_3 > side_2) && (side_3 > side_1) && (side_3*side_3 == side_1*side_1 + side_2*side_2)
+  puts "Your triangle is right"
+end
