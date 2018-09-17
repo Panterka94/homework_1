@@ -25,13 +25,21 @@ puts "input coefficient c"
 coefficient_c = gets.to_i
 
 
-
 # Программма вычисляеи дискриминант
 
+discriminant = coefficient_b*coefficient_b - 4 *coefficient_a *coefficient_c
 
-# Вычисляем корни уравнения
+# Вычисляем корни уравнения и выводим значения на экран
 
-
-# ВЫводим значения на экран
+if discriminant > 0
+  x1 = (-coefficient_b + Math.sqrt(discriminant)) / (2*coefficient_a)
+  x2 = (-coefficient_b - Math.sqrt(discriminant)) / (2*coefficient_a)
+  puts "discriminant= #{discriminant}, x1= #{x1}, x2= #{x2}"
+elsif discriminant == 0
+  x1 = -coefficient_b / (2*coefficient_a)
+  puts "discriminant= #{discriminant}, x= #{x1}"
+else
+  puts "discriminant= #{discriminant}, there is no root in the equation"
+end
 
 
