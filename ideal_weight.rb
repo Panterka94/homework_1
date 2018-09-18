@@ -28,4 +28,3 @@ if user_ideal_weight > 0
 else
   puts "#{user_name} your weight is ideal"
 end
-
