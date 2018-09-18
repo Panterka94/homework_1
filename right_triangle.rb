@@ -24,10 +24,11 @@ if side_1 == side_2 && side_2 == side_3
   puts "Your triangle is equilateral"
 end
 
-if side_1 > side_2 && side_1 > side_3 && side_1**2 == side_2**2 + side_3**2
+longest_side = [side_1, side_2, side_3].max
+if side_1 == longest_side && side_1**2 == side_2**2 + side_3**2
   puts "Your triangle is right"
-elsif side_2 > side_1 && side_2 > side_3 && side_2**2 == side_1**2 + side_3**2
+elsif side_2 == longest_side && side_2**2 == side_1**2 + side_3**2
   puts "Your triangle is right"
-elsif side_3 > side_2 && side_3 > side_1 && side_3**2 == side_1**2 + side_2**2
+elsif side_3 == longest_side && side_3**2 == side_1**2 + side_2**2
   puts "Your triangle is right"
 end
