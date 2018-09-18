@@ -5,12 +5,8 @@
 # длинную сторону (гипотенуза) и сравнить ее значение в квадрате с суммой квадратов двух остальных сторон.
 # Если все 3 стороны равны, то треугольник равнобедренный и равносторонний, но не прямоугольный.
 
-# Запрасить три стороны
-# определить тип треугольника
-# ВЫвести пользователю тип треугольника
-
 def ask_side
-  side = gets.to_i
+  side = gets.to_f
   return side
 end
 
@@ -21,17 +17,17 @@ side_2 = ask_side
 puts "input side 3: "
 side_3 = ask_side
 
-if (side_1  == side_2) || (side_2 == side_3) || (side_1 == side_3)
+if side_1 == side_2 || side_2 == side_3 || side_1 == side_3
   puts "Your triangle is isosceles"
 end
-if (side_1 == side_2) && (side_2== side_3)
+if side_1 == side_2 && side_2 == side_3
   puts "Your triangle is equilateral"
 end
 
-if (side_1 > side_2) && (side_1 > side_3) && (side_1*side_1 == side_2*side_2 + side_3*side_3)
+if side_1 > side_2 && side_1 > side_3 && side_1**2 == side_2**2 + side_3**2
   puts "Your triangle is right"
-elsif (side_2 > side_1) && (side_2 > side_3) && (side_2*side_2 == side_1*side_1 + side_3*side_3)
+elsif side_2 > side_1 && side_2 > side_3 && side_2**2 == side_1**2 + side_3**2
   puts "Your triangle is right"
-elsif (side_3 > side_2) && (side_3 > side_1) && (side_3*side_3 == side_1*side_1 + side_2*side_2)
+elsif side_3 > side_2 && side_3 > side_1 && side_3**2 == side_1**2 + side_2**2
   puts "Your triangle is right"
 end
