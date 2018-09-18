@@ -14,32 +14,29 @@
 #
 #   вернет 4, т.е. квадратный корень из 16.
 
-
 # Получаем три коэффициента от пользователя
 
 puts "input coefficient a: "
-coefficient_a = gets.to_i
+coefficient_a = gets.to_f
 puts "input coefficient b: "
-coefficient_b = gets.to_i
+coefficient_b = gets.to_f
 puts "input coefficient c: "
-coefficient_c = gets.to_i
-
+coefficient_c = gets.to_f
 
 # Программма вычисляеи дискриминант
 
-discriminant = coefficient_b*coefficient_b - 4 *coefficient_a *coefficient_c
+discriminant = coefficient_b**2 - 4 * coefficient_a * coefficient_c
 
 # Вычисляем корни уравнения и выводим значения на экран
 
 if discriminant > 0
-  x1 = (-coefficient_b + Math.sqrt(discriminant)) / (2*coefficient_a)
-  x2 = (-coefficient_b - Math.sqrt(discriminant)) / (2*coefficient_a)
+  discriminant_sqrt = Math.sqrt(discriminant)
+  x1 = (-coefficient_b + discriminant_sqrt) / (2 * coefficient_a)
+  x2 = (-coefficient_b - discriminant_sqrt) / (2 * coefficient_a)
   puts "discriminant= #{discriminant}, x1= #{x1}, x2= #{x2}"
 elsif discriminant == 0
-  x1 = -coefficient_b / (2*coefficient_a)
+  x1 = -coefficient_b / (2 * coefficient_a)
   puts "discriminant= #{discriminant}, x= #{x1}"
 else
   puts "discriminant= #{discriminant}, there is no root in the equation"
 end
-
-
